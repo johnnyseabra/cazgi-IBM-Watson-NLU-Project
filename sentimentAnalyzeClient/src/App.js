@@ -2,6 +2,7 @@ import './bootstrap.min.css';
 import './App.css';
 import EmotionTable from './EmotionTable.js';
 import React from 'react';
+import { Helmet } from 'react-helmet'
 
 class App extends React.Component {
   /*
@@ -73,7 +74,10 @@ class App extends React.Component {
   
 
   render() {
-    return (  
+    return (
+        <Helmet>
+          <title>{ Teste }</title>
+        </Helmet>
       <div className="App">
       <button className="btn btn-info" onClick={()=>{this.renderOutput('text')}}>Text</button>
         <button className="btn btn-dark"  onClick={()=>{this.renderOutput('url')}}>URL</button>
