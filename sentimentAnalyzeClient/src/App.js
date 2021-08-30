@@ -46,7 +46,7 @@ class App extends React.Component {
 
     fetch(url).then((response)=>{
         response.text().then((data)=>{
-        this.setState({sentimentOutput:data});
+        this.setState({sentimentOutput:data.label});
         let output = data;
         let color = "white"
         switch(data) {
